@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christopher & Viviana</title>
+  <meta name="description" content="Invitación de matrimonio de Christopher y Viviana" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="locked">
+  <section id="auth-screen" class="auth-screen" aria-label="Acceso con clave">
+    <div class="auth-card">
+      <p class="eyebrow">Invitación privada</p>
+      <img class="auth-image" src="portada-invitacion.png" alt="Invitación de Christopher y Viviana" />
+      <p class="auth-text">Ingresa la clave para ver toda la información del matrimonio.</p>
+      <form id="password-form" class="password-form">
+        <label for="password-input">Clave</label>
+        <div class="password-row">
+          <input id="password-input" type="password" autocomplete="current-password" placeholder="Escribe la clave" required />
+          <button type="submit">Entrar</button>
+        </div>
+        <p id="auth-error" class="auth-error" role="alert" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <main id="site-content" class="site-content hidden">
+    <section class="hero section" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Nos casamos</p>
+          <h1>Christopher &amp; Viviana</h1>
+          <p class="hero-subtitle">Tenemos la alegría de invitarte a celebrar nuestro matrimonio.</p>
+          <div class="hero-actions" aria-label="Accesos rápidos">
+            <a class="primary-button" href="#rsvp">RSVP</a>
+            <a class="secondary-button" href="#regalos">Regalos</a>
+          </div>
+        </div>
+        <div class="hero-photo-grid" aria-label="Fotos">
+          <img src="portada-invitacion.png" alt="Ilustración de la invitación" />
+          <div class="photo-placeholder">
+            <span>Foto</span>
+            <small>Reemplazar por foto de ustedes</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section details-section" id="detalles">
+      <div class="section-heading">
+        <p class="eyebrow">Información del matrimonio</p>
+        <h2>Coordenadas</h2>
+      </div>
+      <div class="details-layout">
+        <div class="details-grid">
+          <article class="detail-card"><span>Fecha</span><strong>9 de enero de 2027</strong></article>
+          <article class="detail-card"><span>Hora</span><strong>19:00 hrs</strong></article>
+          <article class="detail-card"><span>Lugar</span><strong>Casona Los Paltos, Paine</strong></article>
+          <article class="detail-card"><span>Dress code</span><strong>Formal / semi formal</strong></article>
+        </div>
+        <div class="map-card">
+          <iframe title="Mapa Casona Los Paltos, Paine" src="https://www.google.com/maps?q=Casona%20Los%20Paltos%20Paine%20Chile&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=Casona%20Los%20Paltos%20Paine%20Chile" target="_blank" rel="noopener">Abrir ubicación en Google Maps</a></p>
+        </div>
+      </div>
+      <div class="photo-strip" aria-label="Más fotos">
+        <div class="photo-placeholder small"><span>Foto 1</span><small>Opcional</small></div>
+        <div class="photo-placeholder small"><span>Foto 2</span><small>Opcional</small></div>
+        <div class="photo-placeholder small"><span>Foto 3</span><small>Opcional</small></div>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <div class="section-heading">
+        <p class="eyebrow">Confirmación</p>
+        <h2>RSVP</h2>
+      </div>
+      <div class="text-card">
+        <p>Aquí pueden escribir un mensaje para los invitados: plazo de confirmación, si pueden ir con acompañante, restricciones de comida, transporte, hospedaje o cualquier otra información importante.</p>
+        <a class="primary-button" href="https://forms.gle/REEMPLAZAR_CON_TU_FORM" target="_blank" rel="noopener">Confirmar asistencia</a>
+      </div>
+    </section>
+
+    <section class="section gifts-section" id="regalos">
+      <div class="gifts-intro">
+        <p class="eyebrow">Regalos</p>
+        <h2>Lista simbólica</h2>
+        <p>Aunque una gran máquina para hacer helados suena tremendamente tentadora, esta vez preferimos regalos que se guarden para siempre en nuestra memoria: viajes, experiencias y pequeños panoramas para compartir juntos.</p>
+      </div>
+      <div class="gift-table-wrap">
+        <div class="gift-table-head">
+          <div>Deseo / regalo</div>
+          <div>¿Cuántos quieres regalar?</div>
+          <div>Precio</div>
+        </div>
+        <div id="gift-list" class="gift-list" aria-label="Lista de regalos"></div>
+      </div>
+      <aside class="total-card" aria-live="polite">
+        <div><span>Total seleccionado</span><strong id="total-usd">$0.00 USD</strong></div>
+        <p id="total-note">El total se actualiza automáticamente según las cantidades elegidas.</p>
+      </aside>
+      <div class="payment-section">
+        <h3>Opciones de transferencia</h3>
+        <p>Después de elegir los regalos, pueden transferir el total a una de estas dos opciones.</p>
+        <div class="payment-grid">
+          <article class="payment-box">
+            <h4>Opción 1</h4>
+            <p class="payment-title">Transferencia / Zelle</p>
+            <dl>
+              <div><dt>Nombre</dt><dd>Completar</dd></div>
+              <div><dt>Email / usuario</dt><dd>Completar</dd></div>
+              <div><dt>Nota sugerida</dt><dd>Regalo matrimonio</dd></div>
+            </dl>
+          </article>
+          <article class="payment-box">
+            <h4>Opción 2</h4>
+            <p class="payment-title">Cuenta bancaria</p>
+            <dl>
+              <div><dt>Nombre</dt><dd>Completar</dd></div>
+              <div><dt>Banco</dt><dd>Completar</dd></div>
+              <div><dt>Cuenta</dt><dd>Completar</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Con cariño, Christopher &amp; Viviana</p>
+      <button id="lock-again" class="text-button" type="button">Cerrar invitación</button>
+    </footer>
+  </main>
+</body>
+</html>
