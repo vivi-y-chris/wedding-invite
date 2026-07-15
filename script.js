@@ -1,4 +1,8 @@
+// Cambia esta clave por la que quieras enviar a tus invitados.
+// Esta es una protección simple: la clave queda en el código público de GitHub Pages.
 const PASSWORD = "matrimonio2027";
+
+// Cambia este link por tu Google Form real.
 const RSVP_FORM_URL = "https://forms.gle/REEMPLAZAR_CON_TU_FORM";
 
 const gifts = [
@@ -57,6 +61,7 @@ function lockSite() {
 
 passwordForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
   if (normalize(passwordInput.value) === normalize(PASSWORD)) {
     authError.textContent = "";
     unlockSite();
@@ -87,20 +92,30 @@ function money(value) {
 
 function renderGifts() {
   giftList.innerHTML = "";
+
   gifts.forEach((gift, index) => {
-    const row = document.createElement("article");
-    row.className = "gift-row";
-    row.innerHTML = `
-      <div class="gift-name">${gift.name}</div>
-      <div class="qty-control" aria-label="Cantidad para ${gift.name}">
-        <button type="button" class="qty-minus" data-index="${index}" aria-label="Restar">−</button>
-        <input type="number" min="0" step="1" value="0" inputmode="numeric" data-index="${index}" aria-label="Cantidad" />
-        <button type="button" class="qty-plus" data-index="${index}" aria-label="Sumar">+</button>
+    const card = document.createElement("article");
+    card.className = "gift-card-item";
+
+    card.innerHTML = `
+      <div class="gift-card-top">
+        <h3 class="gift-name">${gift.name}</h3>
+        <div class="gift-price">${money(gift.price)}</div>
       </div>
-      <div class="gift-price">${money(gift.price)}</div>
+
+      <div class="gift-card-bottom">
+        <span class="qty-label">Cantidad</span>
+        <div class="qty-control" aria-label="Cantidad para ${gift.name}">
+          <button type="button" class="qty-minus" data-index="${index}" aria-label="Restar">−</button>
+          <input type="number" min="0" step="1" value="0" inputmode="numeric" data-index="${index}" aria-label="Cantidad" />
+          <button type="button" class="qty-plus" data-index="${index}" aria-label="Sumar">+</button>
+        </div>
+      </div>
     `;
-    giftList.appendChild(row);
+
+    giftList.appendChild(card);
   });
+
   updateTotal();
 }
 
@@ -120,6 +135,7 @@ function updateTotal() {
 giftList.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
+
   const index = button.dataset.index;
   const input = giftList.querySelector(`input[data-index="${index}"]`);
   const current = Number.parseInt(input.value, 10) || 0;
@@ -127,15 +143,18 @@ giftList.addEventListener("click", (event) => {
   if (button.classList.contains("qty-minus")) {
     input.value = Math.max(0, current - 1);
   }
+
   if (button.classList.contains("qty-plus")) {
     input.value = current + 1;
   }
+
   updateTotal();
 });
 
 giftList.addEventListener("input", (event) => {
   const input = event.target.closest("input[type='number']");
   if (!input) return;
+
   const value = Number.parseInt(input.value, 10);
   input.value = Number.isFinite(value) && value > 0 ? value : 0;
   updateTotal();
