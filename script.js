@@ -6,26 +6,22 @@ const PASSWORD = "matrimonio2027";
 const RSVP_FORM_URL = "https://forms.gle/REEMPLAZAR_CON_TU_FORM";
 
 const gifts = [
-  { name: "Un cartón de la lotería de Wisconsin 🍀🍀", price: 5.00 },
-  { name: "Una cerveza para cada uno 🥂💑", price: 10.00 },
-  { name: "2 entradas (student discount!) a la Madison Symphony Orchestra 🎶🎻", price: 30.00 },
-  { name: "Pack de quesos de Wisconsin 🥰🔍", price: 50.00 },
-  { name: "1 hora de clases de inglés 🙏🕰️", price: 60.00 },
-  { name: "Una noche de hospedaje en algún lugar de Europa 🛏️🍷", price: 60.00 },
-  { name: "Un libro de Teoría de Juegos 📚💡", price: 70.00 },
-  { name: "Un libro de Termodinámica 📚🌌", price: 70.00 },
-  { name: "Clases de salsa por un mes 🎷🎶", price: 80.00 },
-  { name: "Una cena deliciosa en la Luna de Miel 🍽️", price: 90.00 },
-  { name: "Brunch de lujo 🍳🍽️", price: 100.00 },
-  { name: "Subir el Empire State en Nueva York 🌆🌃", price: 120.00 },
-  { name: "Una noche de hospedaje en Nueva York 🛁🍷", price: 150.00 },
-  { name: "Una noche de hospedaje en Vancouver 🛏️🚲", price: 150.00 },
-  { name: "Tour por Teotihuacán ⛰️🌿", price: 200.00 },
-  { name: "Entradas a un concierto de SOAD en Chicago 🎵🎤", price: 250.00 },
-  { name: "Viaje por tierra a Toronto 🚗", price: 300.00 },
-  { name: "Pasajes a Vancouver ✈️🚲", price: 400.00 },
-  { name: "Pasajes a Nueva York ✈️🍷", price: 500.00 },
-  { name: "Viaje por Yosemite National Park ⛰️🌄", price: 600.00 }
+  { name: "A Wisconsin lottery ticket 🍀🍀", price: 5.00 },
+  { name: "A beer for each of us 🥂💑", price: 10.00 },
+  { name: "A Wisconsin cheese pack 🥰🔍", price: 20.00 },
+  { name: "2 tickets (student discount!) to the Madison Symphony Orchestra 🎶🎻", price: 30.00 },
+  { name: "1 hour of English lessons 🙏🕰️", price: 40.00 },
+  { name: "A one-night stay somewhere in Europe 🛏️🍷", price: 50.00 },
+  { name: "A Game Theory book 📚💡", price: 60.10 },
+  { name: "A Thermodynamics book 📚🌌", price: 60.00 },
+  { name: "One month of salsa lessons 🎷🎶", price: 70.00 },
+  { name: "A fancy brunch 🍳🍽️", price: 80.00 },
+  { name: "A delicious dinner on our honeymoon 🍽️", price: 90.00 },
+  { name: "Tickets to the top of the Empire State Building in New York 🌆🌃", price: 100.00 },
+  { name: "A one-night stay in New York 🛁🍷", price: 150.00 },
+  { name: "A tour of Teotihuacán ⛰️🌿", price: 200.00 },
+  { name: "Tickets to a SOAD concert in Chicago 🎵🎤", price: 250.00 },
+  { name: "A road trip to Toronto 🚗", price: 300.00 },
 ];
 
 const authScreen = document.getElementById("auth-screen");
