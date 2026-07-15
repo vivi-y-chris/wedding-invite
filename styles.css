@@ -22,7 +22,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.9), rgba(248, 244, 234, 0.95) 45%, #eef4f2 100%);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lora", Georgia, serif;
 }
 
 body.locked {
@@ -64,7 +64,7 @@ body.locked {
 .eyebrow {
   margin: 0 0 12px;
   color: var(--teal);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -74,7 +74,7 @@ body.locked {
 .auth-text,
 p {
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
   line-height: 1.65;
 }
 
@@ -93,7 +93,7 @@ p {
   display: block;
   margin-bottom: 8px;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -254,7 +254,7 @@ button:hover,
   padding: 24px;
   text-align: center;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
 }
 
 .photo-placeholder span,
@@ -337,7 +337,7 @@ button:hover,
   border-radius: 18px;
   background: linear-gradient(135deg, rgba(237, 248, 248, 0.9), rgba(255, 253, 247, 0.95));
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
   text-align: center;
 }
 
@@ -571,7 +571,7 @@ button:hover,
 .payment-box dd {
   margin: 3px 0 0;
   color: var(--ink);
-  font-family: Arial, sans-serif;
+  font-family: "Lora", Arial, sans-serif;
 }
 
 .footer {
