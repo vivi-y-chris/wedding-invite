@@ -195,7 +195,7 @@ button:hover,
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 72px;
   align-items: center;
   padding: clamp(24px, 5vw, 56px);
   border: 1px solid var(--line);
@@ -230,7 +230,6 @@ button:hover,
   justify-content: center;
   gap: 12px;
   margin-top: 30px;
-  margin-bottom: 48px;
 }
 
 .hero-photo-grid {
