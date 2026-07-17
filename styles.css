@@ -230,6 +230,7 @@ button:hover,
   justify-content: center;
   gap: 12px;
   margin-top: 30px;
+  margin-bottom: 48px;
 }
 
 .hero-photo-grid {
