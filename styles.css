@@ -665,3 +665,56 @@ button:hover,
     margin-top: 8px;
   }
 }
+
+.gift-submit-card {
+  width: min(620px, 100%);
+  margin: 32px auto 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 247, 0.92);
+  box-shadow: 0 12px 34px rgba(32, 48, 45, 0.07);
+}
+
+.gift-submit-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#gift-form {
+  display: grid;
+  gap: 12px;
+}
+
+#gift-form label {
+  color: var(--teal);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+#gift-form input,
+#gift-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 13px 14px;
+  background: white;
+  color: var(--ink);
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+}
+
+#gift-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#gift-form button {
+  width: fit-content;
+  margin: 14px auto 0;
+}
+
+#gift-form-status {
+  text-align: center;
+  margin: 14px 0 0;
+}
