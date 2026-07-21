@@ -3,7 +3,7 @@
 const PASSWORD = "matrimonio2027";
 
 // Cambia este link por tu Google Form real.
-const RSVP_FORM_URL = "https://forms.gle/REEMPLAZAR_CON_TU_FORM";
+const RSVP_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScv2iNQlzOIfNVkTfNxbJTCqx-PZQnaG-7dnMBYdWmG9vRZGw/viewform?usp=header";
 
 const GIFTS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxvIHU3_uW6cjDtWIwDA2lSuqUg7ggZ_21KIrgBF4iGz7I7vtVYD-WjBuSMBrx4-L10zg/exec";
 
