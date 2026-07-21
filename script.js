@@ -1,6 +1,6 @@
 // Cambia esta clave por la que quieras enviar a tus invitados.
 // Esta es una protección simple: la clave queda en el código público de GitHub Pages.
-const PASSWORD = "matrimonio2027";
+const PASSWORD = "chrisyvivi2027";
 
 // Cambia este link por tu Google Form real.
 const RSVP_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScv2iNQlzOIfNVkTfNxbJTCqx-PZQnaG-7dnMBYdWmG9vRZGw/viewform?usp=header";
