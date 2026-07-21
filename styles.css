@@ -758,7 +758,7 @@ button:hover,
 
 .map-image {
   display: block;
-  width: 100%;
+  width: min(440px, 100%);
   height: auto;
   max-height: 560px;
   object-fit: contain;
