@@ -5,6 +5,72 @@ const PASSWORD = "matrimonio2027";
 // Cambia este link por tu Google Form real.
 const RSVP_FORM_URL = "https://forms.gle/REEMPLAZAR_CON_TU_FORM";
 
+const GIFTS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxvIHU3_uW6cjDtWIwDA2lSuqUg7ggZ_21KIrgBF4iGz7I7vtVYD-WjBuSMBrx4-L10zg/exec";
+
+const giftForm = document.getElementById("gift-form");
+const guestName = document.getElementById("guest-name");
+const guestMessage = document.getElementById("guest-message");
+const giftFormStatus = document.getElementById("gift-form-status");
+
+function getSelectedGifts() {
+  const quantities = getQuantities();
+
+  return gifts
+    .map((gift, index) => {
+      const quantity = quantities[index];
+      if (quantity <= 0) return null;
+
+      return {
+        name: gift.name,
+        quantity: quantity,
+        unitPrice: gift.price,
+        subtotal: quantity * gift.price
+      };
+    })
+    .filter(Boolean);
+}
+
+function getTotalAmount() {
+  return getSelectedGifts().reduce((sum, gift) => sum + gift.subtotal, 0);
+}
+
+giftForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const selectedGifts = getSelectedGifts();
+  const total = getTotalAmount();
+
+  if (selectedGifts.length === 0) {
+    giftFormStatus.textContent = "Please select at least one gift.";
+    return;
+  }
+
+  const payload = {
+    name: guestName.value,
+    message: guestMessage.value,
+    totalUsd: total,
+    selectedGifts: selectedGifts
+  };
+
+  giftFormStatus.textContent = "Sending...";
+
+  try {
+    await fetch(GIFTS_WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    giftFormStatus.textContent = "Thank you! Your gift selection was sent.";
+    giftForm.reset();
+  } catch (error) {
+    giftFormStatus.textContent = "Something went wrong. Please try again.";
+  }
+});
+
 const gifts = [
   { name: "A Wisconsin lottery ticket 🍀🍀", price: 5.00 },
   { name: "A beer for each of us 🥂💑", price: 10.00 },
