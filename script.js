@@ -64,7 +64,7 @@ giftForm.addEventListener("submit", async (event) => {
       body: JSON.stringify(payload)
     });
 
-    giftFormStatus.textContent = "Thank you! Your gift selection was sent.";
+    giftFormStatus.textContent = "Thank you! Now, on to the last step:";
     giftForm.reset();
   } catch (error) {
     giftFormStatus.textContent = "Something went wrong. Please try again.";
