@@ -192,6 +192,38 @@ function updateTotal() {
   const quantities = getQuantities();
   const total = quantities.reduce((sum, qty, index) => sum + qty * gifts[index].price, 0);
   totalUsd.textContent = money(total);
+  updateGiftPreview();
+}
+
+function updateGiftPreview() {
+  const previewList = document.getElementById("gift-preview-list");
+  if (!previewList) return;
+
+  const quantities = getQuantities();
+
+  const selected = gifts
+    .map((gift, index) => {
+      const quantity = quantities[index];
+      if (quantity <= 0) return null;
+
+      return {
+        name: gift.name,
+        quantity: quantity,
+        subtotal: quantity * gift.price
+      };
+    })
+    .filter(Boolean);
+
+  if (selected.length === 0) {
+    previewList.innerHTML = "<li>No gifts selected yet.</li>";
+    return;
+  }
+
+  previewList.innerHTML = selected
+    .map(gift => {
+      return `<li>${gift.quantity} × ${gift.name} — ${money(gift.subtotal)}</li>`;
+    })
+    .join("");
 }
 
 giftList.addEventListener("click", (event) => {

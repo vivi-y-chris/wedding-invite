@@ -718,3 +718,30 @@ button:hover,
   text-align: center;
   margin: 14px 0 0;
 }
+
+
+.gift-preview-card {
+  margin: 12px 0 4px;
+  padding: 18px;
+  border: 1px solid var(--teal-line);
+  border-radius: 18px;
+  background: var(--teal-soft);
+}
+
+.gift-preview-card h4 {
+  margin: 0 0 10px;
+  color: var(--teal);
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+}
+
+#gift-preview-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ink);
+  font-family: "Lora", Georgia, serif;
+}
+
+#gift-preview-list li {
+  margin: 6px 0;
+}
