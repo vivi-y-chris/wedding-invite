@@ -745,3 +745,22 @@ button:hover,
 #gift-preview-list li {
   margin: 6px 0;
 }
+
+.map-image-frame {
+  width: min(520px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fffdf0;
+  box-shadow: 0 12px 34px rgba(32, 48, 45, 0.07);
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 14px;
+}
